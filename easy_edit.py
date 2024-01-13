@@ -51,7 +51,8 @@ def filter(files, extension):
     result = []
     for filename in files:
         for e in extension:
-            result.append(filename)
+            if filename.endswith(e):
+                result.append(filename)
     return result
 
 def chooseWorkdir():
